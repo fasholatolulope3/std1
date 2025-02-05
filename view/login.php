@@ -31,7 +31,7 @@ body{
 
 </style>
 <body onLoad="login()">
-	<img src="../uploads/ryoji-iwata-n31JPLu8_Pw-unsplash.jpg" class="bg" />
+	<img src="../uploads/bg.jpg" class="bg" />
 	
 	<!--Success! - Insert-->
   	<div class="modal fade" id="loginFrom" tabindex="-1" role="dialog" aria-labelledby="loginFrom" aria-hidden="true">

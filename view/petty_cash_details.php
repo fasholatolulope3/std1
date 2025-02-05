@@ -22,14 +22,14 @@ if(!isset($_SERVER['HTTP_REFERER'])){
                                     </div>
                                 </div>
                                 <div class="col-xs-5 class-name">
-                                	<h2>ILovePrograming</h2>
+                                	<h2>Add Petty Cash</h2>
                                 	<div class="class-address">
-                                    	455 Foggy Heights,<br>
-									    AZ 85004, US
+									455 Offa Garage,<br>
+									Ilorin Kwara State
                                     </div>
                                 </div>
                                 <div class="col-xs-4 class-email text-right ">
-                                    	Email: msk.ms4@gmail.com<br>
+                                    	Email: t2@gmail.com<br>
                                         Phone: 111-111-1111 <br> 
                                 </div>
                         	</div>

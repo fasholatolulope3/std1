@@ -7,16 +7,6 @@
 								$('#amount').val(tSalary);	
 								
 							}
-
-
-
-
-
-
-
-
-
-
 							setTimeout(function() {
 									
 									var amount = $('#amount').val();// this is the value after the keypress
