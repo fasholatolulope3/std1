@@ -33,7 +33,13 @@ if(isset($_GET["friend_type"])&&($_GET["friend_type"]=="Student")){
 			$sql1="SELECT * FROM my_friends WHERE my_index='$my_index' and friend_index='$friend_index'";
 			$result1=mysqli_query($conn,$sql1);
 			$row1=mysqli_fetch_assoc($result1);
-			$status=$row1['_status'];
+
+			$status = '';
+			if ($row1) {
+			    $status = $row1['_status'];
+			} else {
+			    $status = '';
+			}
 			
 ?>   
 			<tr>
@@ -88,7 +94,13 @@ if(isset($_GET["friend_type"])&&($_GET["friend_type"]=="Teacher")){
 			$sql1="SELECT * FROM my_friends WHERE my_index='$my_index' and friend_index='$friend_index'";
 			$result1=mysqli_query($conn,$sql1);
 			$row1=mysqli_fetch_assoc($result1);
-			$status=$row1['_status'];
+
+			$status = '';
+			if ($row1) {
+			    $status = $row1['_status'];
+			} else {
+			    $status = '';
+			}
 ?>   
 			<tr>
 				<td><img src="../<?php echo $image; ?>" class="friend-image"></td>
@@ -143,7 +155,13 @@ if(isset($_GET["friend_type"])&&($_GET["friend_type"]=="Admin")){
 			$sql1="SELECT * FROM my_friends WHERE my_index='$my_index' and friend_index='$friend_index'";
 			$result1=mysqli_query($conn,$sql1);
 			$row1=mysqli_fetch_assoc($result1);
-			$status=$row1['_status'];
+
+			$status = '';
+			if ($row1) {
+			    $status = $row1['_status'];
+			} else {
+			    $status = '';
+			}
 ?>   
 			<tr>
 				<td><img src="../<?php echo $image; ?>" class="friend-image"></td>

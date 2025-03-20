@@ -313,12 +313,16 @@ display:none;
                 	<div class="box-header">
 <?php
 include_once('../controller/config.php');
-$index=$_SESSION["index_number"];
+$index = isset($_SESSION["index_number"]) ? $_SESSION["index_number"] : null;
 
-$sql="select * from student where index_number='$index'";
-$result=mysqli_query($conn,$sql);
-$row=mysqli_fetch_assoc($result);
-$name=$row['i_name'];
+if ($index) {
+    $sql = "SELECT * FROM student WHERE index_number='$index'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $name = isset($row['i_name']) ? $row['i_name'] : 'Unknown';
+} else {
+    $name = 'Unknown';
+}
 ?>                    
                   		<h3 class="box-title">My Salary History</h3>
                 	</div><!-- /.box-header -->
@@ -342,9 +346,9 @@ $index=$_SESSION["index_number"];
 $sql="select * from teacher_salary where index_number='$index'";
 $result=mysqli_query($conn,$sql);
 $count = 0;
-if(mysqli_num_rows($result) > 0) {
-	while($row=mysqli_fetch_assoc($result)){
-		$count++;
+if ($result && mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $count++;
 ?>   
                                 <tr>
                                     <td><?php echo $count; ?></td>

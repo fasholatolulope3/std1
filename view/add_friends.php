@@ -129,7 +129,14 @@ if(mysqli_num_rows($result) > 0){
 		$sql1="SELECT * FROM my_friends WHERE my_index='$my_index' and friend_index='$friend_index'";
 		$result1=mysqli_query($conn,$sql1);
 		$row1=mysqli_fetch_assoc($result1);
-		$status=$row1['_status'];
+		
+
+$status = '';
+if ($row1) {
+    $status = $row1['_status'];
+} else {
+    $status = '';
+}
 		
 ?>   
                                     <tr>
@@ -142,19 +149,16 @@ if(mysqli_num_rows($result) > 0){
 <?php 
 
 if($status == "Pending"){
-	echo '<a href="#" onClick="confirmFriend1(this)" data-id="'.$my_type.','.$my_index.',Student,'.$friend_index.'" class="btn btn-xs bg-green-active">'.'<i class="fa fa-user-plus" aria-hidden="true">'. ' Confirm Friend Request'.'</i>'.'</a>'; 
+    echo '<a href="#" onClick="confirmFriend1(this)" data-id="'.$my_type.','.$my_index.',Student,'.$friend_index.'" class="btn btn-xs bg-green-active">'.'<i class="fa fa-user-plus" aria-hidden="true">'. ' Confirm Friend Request'.'</i>'.'</a>'; 
 }
-					
 if($status == "Friend_Request_Sent"){
-	echo '<span class="label label-info label-lg">' .'Friend Request Sent'.'</span>'; 
+    echo '<span class="label label-info label-lg">' .'Friend Request Sent'.'</span>'; 
 }
-					
 if($status == ""){
-	echo '<a href="#" onClick="addFriends(this)" data-id="'.$my_type.','.$my_index.',Student,'.$friend_index.'" class="btn btn-xs bg-blue">'.'<i class="fa fa-user-plus" aria-hidden="true">'. ' Add Friend'.'</i>'.'</a>';
+    echo '<a href="#" onClick="addFriends(this)" data-id="'.$my_type.','.$my_index.',Student,'.$friend_index.'" class="btn btn-xs bg-blue">'.'<i class="fa fa-user-plus" aria-hidden="true">'. ' Add Friend'.'</i>'.'</a>';
 }
-				 	
 if($status == "Friend"){
-	echo '<span class="label label-lg bg-maroon">' .'Friend'.'</span>'; 
+    echo '<span class="label label-lg bg-maroon">' .'Friend'.'</span>'; 
 }
 								
 ?>
@@ -301,5 +305,7 @@ window.addEventListener("popstate", function() {
 </script>
 
 </div><!-- /.content-wrapper -->  
+
+<?php include_once('footer.php'); ?>
               
 <?php include_once('footer.php');?>

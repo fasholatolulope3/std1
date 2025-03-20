@@ -96,7 +96,7 @@ body {
                       			<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="off">
                     		</div>
                             <div class="form-group" id="divAdmissionFee">
-                      			<label for="">Admission Fee($)</label>
+                      			<label for="">Admission Fee</label>
                       			<input type="text" class="form-control" id="admission_fee" placeholder="Enter admission fee" name="admission_fee" autocomplete="off">
                     		</div>
                              <div class="form-group" id="divHallCharge">

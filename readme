@@ -1,0 +1,13 @@
+ Warning: Undefined array key "mf_id" in C:\wamp64\www\php-project\std1\view\my_friends.php on line 187
+ Warning: Undefined array key "mf_id" in C:\wamp64\www\php-project\std1\view\my_friends1.php on line 191
+  Warning: Trying to access array offset on value of type null in C:\wamp64\www\php-project\std1\view\add_friends2.php on line 130
+  Warning: Trying to access array offset on value of type null in C:\wamp64\www\php-project\std1\view\add_friends2.php on line 130
+  Warning: Undefined array key "mf_id" in C:\wamp64\www\php-project\std1\view\my_friends2.php on line 190
+  Warning: Undefined array key "mf_id" in C:\wamp64\www\php-project\std1\view\my_friends2.php on line 190 Call Stack #TimeMemoryFunctionLocation 10.0038463480{main}( )...\my_friends2.php:0 "> Student 20
+  dad
+   Warning: Undefined array key "id" in C:\wamp64\www\php-project\std1\view\my_sons_teacher.php on line 91
+   Warning: Undefined array key "id" in C:\wamp64\www\php-project\std1\view\my_sons_teacher.php on line 91 Call Stack #TimeMemoryFunctionLocation 10.0023455408{main}( )...\my_sons_teacher.php:0 ">Teacher 2
+   Warning: Undefined array key "id" in C:\wamp64\www\php-project\std1\view\my_sons_teacher.php on line 91 Call Stack #TimeMemoryFunctionLocation 10.0023455408{main}( )...\my_sons_teacher.php:0 ">Teacher 3
+   Warning: Undefined array key "id" in C:\wamp64\www\php-project\std1\view\my_sons_teacher.php on line 91 Call Stack #TimeMemoryFunctionLocation 10.0023455408{main}( )...\my_sons_teacher.php:0 ">Teacher 4
+   Warning: Undefined array key "id" in C:\wamp64\www\php-project\std1\view\my_sons_teacher.php on line 91 Call Stack #TimeMemoryFunctionLocation 10.0023455408{main}( )...\my_sons_teacher.php:0 ">Teacher 5
+   Warning: Undefined array key "id" in C:\wamp64\www\php-project\std1\view\my_sons_teacher.php on line 91 Call Stack #TimeMemoryFunctionLocation 10.0023455408{main}( )...\my_sons_teacher.php:0 ">Teacher 6

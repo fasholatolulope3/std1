@@ -52,8 +52,8 @@ while($row2=mysqli_fetch_assoc($result2)){
 ?>    
                  	<tr id="<?php echo $s_time; ?>_<?php echo $e_time; ?>" >
                     	<th  style="color:white; background-color:#666;">
-                        	<span id="spanSTime_<?php echo $row2['id']; ?>" data-id="<?php echo $s_time; ?>"><?php echo $s_time; ?></span> - 		
-                            <span id="spanETime_<?php echo $row2['id']; ?>" data-id="<?php echo $e_time; ?>"><?php echo $e_time; ?></span>
+                        	<span id="spanSTime_<?php echo isset($row2['id']) ? $row2['id'] : ''; ?>" data-id="<?php echo $s_time; ?>"><?php echo $s_time; ?></span> - 		
+                            <span id="spanETime_<?php echo isset($row2['id']) ? $row2['id'] : ''; ?>" data-id="<?php echo $e_time; ?>"><?php echo $e_time; ?></span>
                         </th>
                         <td>
 <?php 
@@ -302,4 +302,3 @@ if (mysqli_num_rows($result) > 0) { // 7#
     	</div><!-- /.box-body -->	
 	</div><!-- /.box -->
 </div><!-- /.col-md-10 -->
-        
