@@ -184,11 +184,15 @@ if(mysqli_num_rows($result) > 0){
 			$friend_image=$row1['image_name'];
 		}
 				
-		
+		if (isset($row['mf_id'])) {
+			$mf_id = $row['mf_id'];
+		} else {
+			$mf_id = null; // Handle the missing key appropriately
+		}
 ?>   
                                 <tr>
                                     <td><img src="../<?php echo $friend_image; ?>" class="friend-image"></td>
-                                    <td id="td1_<?php echo $row['mf_id']; ?>">
+                                    <td id="td1_<?php echo $mf_id; ?>">
 									<a href="#"onClick="friendProfile('<?php echo $friend_type; ?>','<?php echo $friend_index; ?>')"><?php echo $friend_name; ?> </a><br>
                                         
                                         <?php 
